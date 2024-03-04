@@ -1,5 +1,5 @@
 export class Character {
-    constructor(name) {
+    constructor(name, type) {
         if ( name !== 'string' || name.lenght < 2 || name.lenght > 10 ) {
             throw new Error("Wrong name")
         }
@@ -9,12 +9,14 @@ export class Character {
             throw new Error("Wrong type")
         }
 
-        this.name = name // - имя
-        this.type // - тип
-        this.health // - уровень жизни
-        this.level // - уровень персонажа
-        this.attack // - атака
-        this.defence // - защита
+        this.health = 100;
+        this.level = 1; 
+
+        this.name = name; 
+        this.type = type;
+        
+        this.attack = undefined;
+        this.defence = undefined;
     }
 
     levelUp() {
