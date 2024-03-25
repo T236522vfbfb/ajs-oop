@@ -1,4 +1,4 @@
-export class Character {
+export default class Character {
     constructor(name, type) {
         if ( name !== 'string' || name.lenght < 2 || name.lenght > 10 ) {
             throw new Error("Wrong name")
